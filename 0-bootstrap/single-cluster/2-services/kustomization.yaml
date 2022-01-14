@@ -57,9 +57,9 @@ resources:
 #  - argocd/operators/turbonomic.yaml
  #- argocd/instances/instana-agent.yaml
 
- # RHSSO
- - argocd/operators/rhsso-operator.yaml
- - argocd/instances/rhsso-instance.yaml
+#  # RHSSO
+#  - argocd/operators/rhsso-operator.yaml
+#  - argocd/instances/rhsso-instance.yaml
 
 #  # RHSSO instance - configs
 #  - argocd/instances/rhsso-integration-preprocessing-instance.yaml
