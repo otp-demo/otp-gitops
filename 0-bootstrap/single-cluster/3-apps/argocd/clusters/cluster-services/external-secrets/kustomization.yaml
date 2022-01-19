@@ -1,0 +1,4 @@
+resources:
+  - external-secrets-application.yaml
+  - external-secrets-placement-rule.yaml
+  - external-secrets-subscription.yaml
