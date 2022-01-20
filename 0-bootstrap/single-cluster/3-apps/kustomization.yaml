@@ -42,8 +42,8 @@ resources:
  
  #Cluster Services 
  - argocd/clusters/submariner/deploy-submariner.yaml
- - argocd/clusters/cluster-services/cert-manager/cert-manager.yaml
- - argocd/clusters/cluster-services/external-secrets/
+ - argocd/clusters/cluster-services/cert-manager.yaml
+ - argocd/clusters/cluster-services/external-secrets.yaml
 
  ## Deploy Applications to Managed Clusters
  ## Include the Applications you wish to deploy below
