@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: apps-cluster-services-cloudwatch
   annotations:
-    argocd.argoproj.io/sync-wave: "420"
+    argocd.argoproj.io/sync-wave: "430"
   labels:
     gitops.tier.layer: applications
   finalizers:
