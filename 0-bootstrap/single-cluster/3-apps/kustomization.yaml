@@ -33,25 +33,31 @@ resources:
 #  - argocd/clusters/create/aws/aws-cluster-4.yaml
 #  - argocd/clusters/create/aws/aws-cluster-5.yaml
 #  - argocd/clusters/create/aws/aws-cluster-6.yaml
+  # - argocd/clusters/create/aws/aws-cluster-shared-0.yaml
+  # - argocd/clusters/create/aws/aws-cluster-shared-1.yaml
+  # - argocd/clusters/create/aws/aws-cluster-shared-2.yaml
 
  ## Create Instana Virtual Machines
  #- argocd/infra/virtual-machines/instana/instana-vm.yaml
-
- - argocd/clusters/submariner/create-managed-clusterset.yaml
- # - argocd/clusters/submariner/add-clusters-to-clusterset.yaml
  
  #Cluster Services 
- - argocd/clusters/submariner/deploy-submariner.yaml
 # - argocd/clusters/cluster-services/cert-manager.yaml
  - argocd/clusters/cluster-services/external-secrets.yaml
 # - argocd/clusters/cluster-services/vault.yaml
  - argocd/clusters/cluster-services/cloudwatch.yaml
 
-
+  # - argocd/clusters/submariner/create-managed-clusterset.yaml
+  # - argocd/clusters/submariner/configure-azure.yaml
+  # - argocd/clusters/submariner/create-managed-clusterset.yaml 
+  # - argocd/clusters/submariner/deploy-submariner.yaml
  ## Deploy Applications to Managed Clusters
  ## Include the Applications you wish to deploy below
  ## An example has been provided
  #- argocd/cloudpaks/cp4i/cp4i.yaml
+ 
+  # - argocd/sync-wave-demo/sync-wave-demo-0.yaml
+  # - argocd/sync-wave-demo/sync-wave-demo-1.yaml
+
 
 patches:
 - target:
