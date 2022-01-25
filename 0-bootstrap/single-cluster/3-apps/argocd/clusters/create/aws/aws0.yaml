@@ -1,0 +1,57 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: apps-cluster-aws0
+  annotations:
+    argocd.argoproj.io/sync-wave: "350"
+  labels:
+    gitops.tier.layer: applications
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  destination:
+    namespace: openshift-gitops
+    server: https://kubernetes.default.svc
+  project: applications
+  source:
+    path: clusters/cluster-build/aws/
+    helm:
+      values: |
+        cluster: aws0
+        type: aws
+        imageName: img4.8.25-x86-64-appsub
+        clusterSet: 
+          name: "multicloud-cluster-set"
+          enabled: true
+          
+        provider:
+          region: eu-central-1
+          baseDomain: mutihybridcloudkitchen.com
+          aws_access_key_id: AgCUJOVxN9bhxYVU5jll+TMvXdM2LlekkTsbid+wTQVojPKfyd1KI1d2QG8yTV2nHxjV1fKD8sQyUXkikxNwazghiwt51kIM10NWXPtVDncilncjXKvu8zfTvNRGHcZV8Z/MJBYYofO/WigyoOAbz74va47G6uJNzudvxcvpud+4RaDJsxjzKjtihugFsFWmzFBUP2gfAvAFYbMiIM6+qBea2jI3chn9ma8+w8VFjMwDHcV2hbshTtOSgHIJ998lwUCGdf7MnDoFfbyH6O73+qIIskupVc1j8PqXw8rI9dbRIG3jhGF4AZxu4DmmyrnWoeYwbJCBzZLP0d4En6II+kUVw60y9c38fx5bCNMaGvuzoo+JoQWTg3wB/83O3vGmrUUE3ye2UdD2scbxqhsoesc8v/uNk5MAtIjQvVHCTRj3xw5K/vJrVReCmBuBpQBxmsNW2fP9lRPFMoqt18hVjOCINdiiSjWlzXugIYTnZX+r6/EbXcpvqEeWiEyzks9Fdya0RkIfc57Lup1wH43ZREZbEtkFym0nbFjqOnXoC88OsZp7xWNGDHKFvx0UupwHwwpXjB17BUx6vU3DWh8l6Blk+S41kjkj4p8Rc7gkq1kFJk1ohxu2ygI7HXvBWsv4bjn8tvXD2SvdDoIgbGfplZJQ+lYEai/6mlG0w4RKHt238WGJCgGHUaEJxOyf8b6zv5ofGPZQzW+aTQf/YbxFh8gYsXTdEFVRV7I=
+          aws_secret_access_key: AgBpm9uT6BnbsEkYG+KaDzqB5lfLrGDbaDyycyURqt9oxWz3tHGbXg6PpxhTkK5oMMqcVXhkn6jT+Bc60ili8Vv9ebyx/4TCLXzZQ3ihaa+NU3B0c1MtQveqBRARnUlxXXUmepcYsgZmNHV/sRGBCAb7Gb8I9cJIo2VCRDxHRwqZzizjOHh/aFT2MrK9RH9L6Vq+PmmQPwhXZtjVFgl8NJxnVr6bh7hJihOufj48zfmI80JK/6opLDWhajsX7N3/x/Jl9EXML7eW68J4OR0wmFqVc6zjPeS6vMs3pdbDVZ5Pk/26uGKqwW57BZZmuvxdl7A6DzrPZUlhuAkiJEoI7NYWyMIt3m8hosgIE6J6VbzuF0Gnu9vEkAdNlAzavIIg9rjVtOuJOhRNKjWYu5yLb4j1OsFlEJLg62Uz5Xgk0XUtVyGxeJJV81zz19V6NrrGqyemn27o6MlS4l45S8xyMu8Zc2hB24un4DIc24MSIfk8NJx2Q012CYYXwZRkEzUue2uPSHgJcb7oYVMflIZZZ5WgIPu0dhdsqk9uJuk1hlwWss3r1V4VzKTcTLtdnt7GMNbCb3DC0wy+G+uRlPwIQjM5aTUBCKRSKlSod9QEe5Ba+wg2A9Tif0U8g34wks1snJcnvSz/c+zG5nQZkia8nTuCLaeBeaZJk4oEEVN7gNUI2RJsYuehODEC5XxQw69heF8n3Bds/XkjC9b2/AhCsynNRc5JUUrXd1ZezU0Pj9S2Sd9ypM6zlLwrdA1myw==
+          pullSecret: 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
+          sshPrivatekey: AgAbY5mNol1azmkNyW3eQgWrhvsP4qv5B6CEnJ8CeSnpTqbz9mC9dDeabMiWDNvLu4hv5KzPj2u/MqI15f2VoNunj9oNmpcTfxkENnyLWnNj4lwwEUiF4W4E+VUC9ssd2MWvdIMfIFVcw1DyE2bE/VPN60ZxQdUnRWtpCQb0XEaZK4imvwJyaaL6awZlKhBFmdmX9ZdH5PHpYTxEtyWrCYk4HYE4Ln1KPrqQ2GMmbV/NQhwaz20KhfcuvHTc+/nHqTJPOViMTav9pZZzFehB6MOHVPuf37ar3NADFI58egdY0prBhG3lqpCg+xp6tzIxEVnGZS/Iv7fbvnJDqpO+BpQqzbWVze+TY8nqHtUrczsuB2RUl9GX5inL45NMAkLWQNsn6DJ1qyYpy9kZ3thJC3IgvzAQtIHxokzqAYiS2IGntNTv9OMBmVUn/QTDMLNeEDTpvdBqkRvApU7JmRNftLYTUGrsPB1BXoRoR/dQhJZwcK4qge8GKCDJV7hy/fg2hsUVeHSKwnO05k4l/PigHmQxbH5JQ4ml5YHNgq+ehBiAwbFVq0vOIHf3qIt80ZKFQbGlyI8ueC43WWR98kD4+RfoiLEJvp13efgw9bd02kBAqUHIk41KqwKRmn/plZsxoWKesek1lxgn34LB50No2WfxT28RMpfEgrY+C901X83NxmhFP9Rpc+kHK920nMFWd8lWfuugyMuqMKuEP4NHUXeAqsFvcUVuWe4MgVcrRREJ
+          installConfig: AgBEC30bZt4xeze03aRvPLqlqr1Jg04pWiYxQ+PQSwRO/DK23agwSF8gZsLV/BULY1YW+fnjYXJxQ/uvTudg3oYoNkzO9fXKrpJduvhQKkd6B1xiFlgCL3rTUzETih9ydYzmEpC2UjS2W4q2k6P7CmfeHpEXV4M66+0gvCLH+aGhi2trn/KQ0p8+FQbaQVkSluzLEGeVnhglNvJU5Knf5BRCfOEsCG/uHlbvoqa8Opv/9Pz7cPaDJEHRqoDQt7MZ6SnBLKnyk2Tilq+o5v4AbJMYVplZ/IQTDsdGBYN5qAih0fqidbN7gjHs2vktxju57E0svlQ3TB7mHoE3OMM5eH+rLIberiKtEnhD56oOGTBwJABpXRzI/DMpT11LsR6uy8txmhEGcKPuMGWcrfvDIa0A0nOT26g8sWxtCX1M8tsnhhGj3Sh/2T1BbKZ6PC1LuCiKTxgoZjQvgB0/CKm3cLBoCRTKNcYpYUxAc7TfyPKAoFF6Uxpua2Ft7Be9rbuaGvqJDsHegDxMq7P8FxoCgTu30KRFCDhd4aC4FgYzllK0Ymah/xNNDK3Nuws671Xz9H1o/nN+i+apEBCzdE/DklVREL1yrBK3d3z4TxP6FQPaI/VrY2fVbTOHWsJatX2F4rLfII+zcMzeK14Qc5k5zaDiwtdFhmxhcGsON9U8+kaok0uYpklDAZGv3bjW07qzQtii1Hx5
+
+        masters:
+          count: 3
+          diskIops: 4000
+          diskSize: 100
+          diskType: io1
+          machineType: m5.xlarge
+
+        workers:
+          count: 3
+          diskIops: 4000
+          diskSize: 100
+          diskType: io1
+          machineType: m5.xlarge
+
+        network:
+            clusterCidr: 10.132.0.0/14
+            machineCidr: 10.0.0.0/16
+            serviceCidr: 172.31.0.0/16
