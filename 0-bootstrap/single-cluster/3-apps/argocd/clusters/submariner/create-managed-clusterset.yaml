@@ -17,7 +17,7 @@ spec:
     path: clusters/submariner/create-managed-clusterset/
     helm:
       values: |
-        name: "azure-aws-clusterset"
+        name: "multicloud-cluster-set"
   syncPolicy:
     automated:
       prune: true
