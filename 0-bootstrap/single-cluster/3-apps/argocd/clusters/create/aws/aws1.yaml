@@ -28,7 +28,7 @@ spec:
           name: "multicloud-cluster-set"
           enabled: true
           
-         provider:
+        provider:
           region: ap-southeast-1
           baseDomain: mutihybridcloudkitchen.com
           aws_access_key_id: AgBimD28+snZHMm4tGTnwV322+w7oAEUG5IRYETsj4YOFKkHIhR+nolmMCTtjlZWqyu1TjvRuUdJ/sM71QbkNR86iKMctlHnSs6PiLkuUlgn9JL3COuMJvagw47qb2wn+P1TEnA4r9PMvwauL4cM5/iq6W77lIM2icNtkFMA4yHXM2ZCupk+6CQ445JsOPc48J5EDUxXhc4hpGPolHYcfJ6hOWVNBy8/IAYZEbOz5R0Wel5ldTnh0luXm8Xw9RGWHHYlwkdxNTYrEHKydDsBNq7/71yrFCNjW285W4+DArrbgrH978spDkS54nPts2PKn7xY2+92uAZQmpgPHGLJCP6TE7ycEE4GsN692M3uVNw9GlgsRU4ctOOMgR9UDj66GSlJwL+mFDIRE6ruM95vRANVr2BgU4v/VIfTjK3o+xg/mYvzVwcKEZuhof4blMuL341hVKMrymkEHlhkXB5KgnorlESmCJktkg8WCL3egnElh5aoOYcfChkDDnHHwYyWLlP+1+ClJstBUEkvGvrBzjOe0hDy0eIsi747YZq+KtfPta+AEy7jV1fB7rx1Nui22gQXNeZGBvTvBtGzPP4QG6ciHDYK6bWMx7lGrgHrnwEZoCZUmE6YykwWsTa/Br/idAGRImhtVwjdrc8P4UJxZt6AGVb2jexNCq16Ev/IMO0EMhtziox+eTT893qDv8EaA0bvD92lBqeQ2je/IeNUOG0iyIyRFuGBkYk=
