@@ -20,9 +20,11 @@ spec:
         clustersList: 
         - aws0
         - aws1
+        - aws2
         awsClustersList: 
         - aws0
         - aws1
+        - aws2
   syncPolicy:
     automated:
       prune: true
