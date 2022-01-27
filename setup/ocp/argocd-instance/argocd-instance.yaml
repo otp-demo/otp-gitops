@@ -53,6 +53,11 @@ spec:
               hs.message = condition.message
               return hs
             end
+            if condition.type == "Unreachable" and condition.status == "False" then
+              hs.status = "Healthy"
+              hs.message = "Managed cluster is added to hub cluster"
+              return hs
+            end
           end
         end
         hs.status = "Progressing"
