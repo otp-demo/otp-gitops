@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: apps-cluster-deploy-submariner
+  name: apps-create-global-zone-aws
   annotations:
     argocd.argoproj.io/sync-wave: "420"
   labels:
