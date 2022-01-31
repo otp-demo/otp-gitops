@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: apps-cluster-deploy-submariner
   annotations:
-    argocd.argoproj.io/sync-wave: "400"
+    argocd.argoproj.io/sync-wave: "415"
   labels:
     gitops.tier.layer: applications
   finalizers:
@@ -28,4 +28,4 @@ spec:
   syncPolicy:
     automated:
       prune: true
-      selfHeal: true
+      selfHeal: false
