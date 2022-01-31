@@ -58,6 +58,9 @@ resources:
  ## An example has been provided
  #- argocd/cloudpaks/cp4i/cp4i.yaml
 
+ # Global load balancer configuration
+ - argocd/clusters/global-load-balancer/create-global-zone-aws.yaml
+
 patches:
 - target:
     group: argoproj.io
