@@ -21,7 +21,7 @@ resources:
 
  # Secrets Managment
  - argocd/instances/sealed-secrets.yaml
- - argocd/operator/external-secrets.yaml
+ - argocd/operators/external-secrets.yaml
  - argocd/instances/external-secrets.yaml
 
 
