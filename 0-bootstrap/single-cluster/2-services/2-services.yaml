@@ -116,6 +116,10 @@ spec:
     kind: ValidatingWebhookConfiguration
   - group: "cert-manager.io"
     kind: ClusterIssuer
+  - group: "cert-manager.io"
+    kind: Issuer 
+  - group: "cert-manager.io"
+    kind: Certificate 
   roles:
   # A role which provides read-only access to all applications in the project
   - name: read-only
