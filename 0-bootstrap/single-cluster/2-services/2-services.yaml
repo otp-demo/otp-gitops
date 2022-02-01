@@ -108,8 +108,10 @@ spec:
     kind: objectbucketclaims
   - group: "automationcontroller.ansible.com" 
     kind: automationcontrollers
-  - group: "admissionregistration.k8s.io"
+  - group: "admissionregistration.k8s.io"   #added for cert-manager
     kind: MutatingWebhookConfiguration
+  - group: "admissionregistration.k8s.io"   #added for cert-manager
+    kind: ValidatingWebhookConfiguration
   roles:
   # A role which provides read-only access to all applications in the project
   - name: read-only
