@@ -108,7 +108,7 @@ spec:
     kind: objectbucketclaims
   - group: "automationcontroller.ansible.com" 
     kind: automationcontrollers
-  - group: “admissionregistration.k8s.io”
+  - group: "admissionregistration.k8s.io"
     kind: MutatingWebhookConfiguration
   roles:
   # A role which provides read-only access to all applications in the project
