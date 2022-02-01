@@ -83,7 +83,7 @@ spec:
   - group: ""
     kind: services
   - group: ""
-    kind: namespace
+    kind: Namespace
   - group: ""
     kind: configmaps
   - group: ""
