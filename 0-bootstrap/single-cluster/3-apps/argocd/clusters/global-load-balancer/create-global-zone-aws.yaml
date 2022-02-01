@@ -17,7 +17,7 @@ spec:
     path: clusters/global-load-balancer/create-global-zone-aws
     helm:
       values: |
-        awsClustersList: aws0 
+        awsCluster: aws0 
         AWS_USER: cba-api-access
   syncPolicy:
     automated:
