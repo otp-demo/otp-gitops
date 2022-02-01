@@ -114,6 +114,8 @@ spec:
     kind: MutatingWebhookConfiguration
   - group: "admissionregistration.k8s.io"   #added for cert-manager
     kind: ValidatingWebhookConfiguration
+  - group: "cert-manager.io"
+    kind: ClusterIssuer
   roles:
   # A role which provides read-only access to all applications in the project
   - name: read-only
