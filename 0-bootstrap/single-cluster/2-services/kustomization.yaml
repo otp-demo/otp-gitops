@@ -15,7 +15,7 @@ resources:
  # Required for IBM ACE, IBM MQ
  
  # Certificate Management
-# - argocd/operators/cert-manager.yaml
+ - argocd/operators/cert-manager.yaml
 # - argocd/instances/cert-manager.yaml
 
  # Secrets Managment
