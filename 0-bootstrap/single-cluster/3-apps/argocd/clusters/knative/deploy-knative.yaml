@@ -12,9 +12,9 @@ spec:
   destination:
     namespace: openshift-gitops
     server: https://kubernetes.default.svc
-  project: services
+  project: applications
   source:
-    path: operators/openshift-serverless/overlays/stable
+    path: clusters/knative/deploy-knative/
   syncPolicy:
     automated:
       prune: true
