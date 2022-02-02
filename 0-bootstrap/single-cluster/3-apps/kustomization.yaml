@@ -57,7 +57,8 @@ resources:
  ## Include the Applications you wish to deploy below
  ## An example has been provided
  #- argocd/cloudpaks/cp4i/cp4i.yaml
-
+ - argocd/clusters/knative/deploy-knative.yaml
+ 
  # Global load balancer configuration
  - argocd/clusters/global-load-balancer/create-global-zone-aws.yaml
 
