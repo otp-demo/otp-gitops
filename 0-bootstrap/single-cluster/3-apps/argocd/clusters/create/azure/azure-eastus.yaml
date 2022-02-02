@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: apps-cluster-azure-uk
+  name: apps-cluster-azure-eastus
   annotations:
     argocd.argoproj.io/sync-wave: "350"
   labels:
@@ -14,7 +14,7 @@ spec:
     server: https://kubernetes.default.svc
   project: applications
   source:
-    path: clusters/cluster-build/azure/azure-uk/
+    path: clusters/cluster-build/azure/azure-eastus/
   syncPolicy:
     automated:
       prune: true
