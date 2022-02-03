@@ -18,8 +18,8 @@ spec:
     helm:
       values: |
         azureClustersList: 
-        - azureauseast
-        - azureeastus
+        - azure0
+        - azure1
   syncPolicy:
     automated:
       prune: true
