@@ -27,6 +27,8 @@ spec:
         clusterSet:
           name: "multicloud-cluster-set"
           enabled: true
+
+        powerState: Running
         
         provider:
           region: ap-southeast-2
