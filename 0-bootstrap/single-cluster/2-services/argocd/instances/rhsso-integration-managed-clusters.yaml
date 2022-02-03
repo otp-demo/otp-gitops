@@ -19,11 +19,11 @@ spec:
     helm:
       values: |
         clustersList: 
-        - aws0
-        - aws1
-        - aws2
-        - azure0
-        - azure1
+        - aws-cluster-shared-0
+        - aws-cluster-shared-1
+        - aws-cluster-shared-2
+        - aws-cluster-shared-03
+        - azure-cluster-06
   syncPolicy:
     automated:
       prune: true
