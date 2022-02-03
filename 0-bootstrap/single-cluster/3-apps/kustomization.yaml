@@ -51,9 +51,10 @@ resources:
 # - argocd/clusters/cluster-services/cloudwatch.yaml
 
  - argocd/clusters/submariner/create-managed-clusterset.yaml
-  # - argocd/clusters/submariner/configure-azure.yaml
-  # - argocd/clusters/submariner/create-managed-clusterset.yaml 
+ - argocd/clusters/submariner/configure-azure.yaml
  - argocd/clusters/submariner/deploy-submariner.yaml
+ 
+ 
  ## Deploy Applications to Managed Clusters
  ## Include the Applications you wish to deploy below
  ## An example has been provided
