@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: rhsso-integration-managed-clusters
+  name: rhsso-integration-azure
   annotations:
     argocd.argoproj.io/sync-wave: "253"
   labels:
@@ -15,15 +15,7 @@ spec:
     server: https://kubernetes.default.svc
   project: services
   source:
-    path: instances/rhsso-integration-managed-clusters
-    helm:
-      values: |
-        clustersList: 
-        - aws0
-        - aws1
-        - aws2
-        - azure0
-        - azure1
+    path: instances/rhsso-integration-azure
   syncPolicy:
     automated:
       prune: true
