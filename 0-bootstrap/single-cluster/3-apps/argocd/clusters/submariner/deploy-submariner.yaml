@@ -21,6 +21,8 @@ spec:
         - aws0
         - aws1
         - aws2
+        - azureauseast
+        - azureeastus
         awsClustersList: 
         - aws0
         - aws1
