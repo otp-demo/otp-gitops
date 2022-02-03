@@ -40,6 +40,8 @@ resources:
  - argocd/clusters/create/aws/aws1.yaml
  - argocd/clusters/create/aws/aws2.yaml
 
+ - argocd/clusters/create/azure/azure0.yaml
+
 
  ## Create Instana Virtual Machines
  #- argocd/infra/virtual-machines/instana/instana-vm.yaml
