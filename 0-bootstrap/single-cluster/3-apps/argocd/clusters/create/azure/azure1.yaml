@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: apps-cluster-azure0
+  name: apps-cluster-azure1
   annotations:
     argocd.argoproj.io/sync-wave: "350"
   labels:
