@@ -42,7 +42,7 @@ resources:
  - argocd/clusters/create/azure/azure0.yaml
  - argocd/clusters/create/azure/azure1.yaml
 
- - argocd/clusters/create/vsphere/vsphere1.yaml
+# - argocd/clusters/create/vsphere/vsphere1.yaml
 
 
  ## Create Instana Virtual Machines
