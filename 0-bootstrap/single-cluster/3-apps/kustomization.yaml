@@ -40,8 +40,8 @@ resources:
  - argocd/clusters/create/aws/aws1.yaml
  - argocd/clusters/create/aws/aws2.yaml
 
- - argocd/clusters/create/azure/azure0.yaml
- - argocd/clusters/create/azure/azure1.yaml
+# - argocd/clusters/create/azure/azure0.yaml
+# - argocd/clusters/create/azure/azure1.yaml
 
 
  ## Create Instana Virtual Machines
@@ -54,7 +54,7 @@ resources:
 # - argocd/clusters/cluster-services/cloudwatch.yaml
 
  - argocd/clusters/submariner/create-managed-clusterset.yaml
- - argocd/clusters/submariner/configure-azure.yaml
+# - argocd/clusters/submariner/configure-azure.yaml
  - argocd/clusters/submariner/deploy-submariner.yaml
  
  
