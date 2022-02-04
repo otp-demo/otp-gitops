@@ -6,13 +6,14 @@ metadata:
     argocd.argoproj.io/sync-wave: "350"
   labels:
     gitops.tier.layer: applications
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
+#  finalizers:
+#    - resources-finalizer.argocd.argoproj.io
 spec:
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+      allowEmpty: true # added to delete a deleted argocd app
   destination:
     namespace: openshift-gitops
     server: https://kubernetes.default.svc
