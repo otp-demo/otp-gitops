@@ -19,7 +19,6 @@ spec:
       values: |
         azureClustersList: 
         - azure0
-#        - azure1
   syncPolicy:
     automated:
       prune: true
