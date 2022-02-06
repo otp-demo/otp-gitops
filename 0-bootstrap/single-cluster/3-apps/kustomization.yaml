@@ -27,7 +27,6 @@ resources:
  #- argocd/clusters/create/aws/aws-tokyo.yaml
  #- argocd/clusters/create/azure/azure-aus.yaml
  #- argocd/clusters/create/azure/azure-eastus.yaml
-# - argocd/clusters/create/vsphere/vsphere-eltham.yaml
 #  - argocd/clusters/create/aws/aws-cluster-2.yaml
 #  - argocd/clusters/create/aws/aws-cluster-3.yaml
 #  - argocd/clusters/create/aws/aws-cluster-4.yaml
@@ -40,8 +39,10 @@ resources:
  - argocd/clusters/create/aws/aws1.yaml
  - argocd/clusters/create/aws/aws2.yaml
 
-# - argocd/clusters/create/azure/azure0.yaml
-# - argocd/clusters/create/azure/azure1.yaml
+ - argocd/clusters/create/azure/azure0.yaml
+ - argocd/clusters/create/azure/azure1.yaml
+
+ - argocd/clusters/create/vsphere/vsphere1.yaml
 
 
  ## Create Instana Virtual Machines
@@ -50,11 +51,11 @@ resources:
  #Cluster Services 
  - argocd/clusters/cluster-services/cert-manager.yaml
  - argocd/clusters/cluster-services/external-secrets.yaml
-# - argocd/clusters/cluster-services/vault.yaml
+ - argocd/clusters/cluster-services/vault.yaml
 # - argocd/clusters/cluster-services/cloudwatch.yaml
 
  - argocd/clusters/submariner/create-managed-clusterset.yaml
-# - argocd/clusters/submariner/configure-azure.yaml
+ - argocd/clusters/submariner/configure-azure.yaml
  - argocd/clusters/submariner/deploy-submariner.yaml
  
  
