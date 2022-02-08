@@ -50,6 +50,7 @@ resources:
  
  #Cluster Services 
  - argocd/clusters/cluster-services/cert-manager.yaml
+ - argocd/clusters/cluster-services/cert-utils.yaml
  - argocd/clusters/cluster-services/external-secrets.yaml
  - argocd/clusters/cluster-services/vault.yaml
 # - argocd/clusters/cluster-services/cloudwatch.yaml

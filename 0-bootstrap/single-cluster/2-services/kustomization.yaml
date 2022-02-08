@@ -30,11 +30,11 @@ resources:
  - argocd/operators/openshift-pipelines.yaml
 
  # Service Mesh
- - argocd/operators/elasticsearch.yaml
- - argocd/operators/jaeger.yaml
- - argocd/operators/kiali.yaml
- - argocd/operators/openshift-service-mesh.yaml
- - argocd/instances/openshift-service-mesh-instance.yaml
+# - argocd/operators/elasticsearch.yaml
+# - argocd/operators/jaeger.yaml
+# - argocd/operators/kiali.yaml
+# - argocd/operators/openshift-service-mesh.yaml
+# - argocd/instances/openshift-service-mesh-instance.yaml
 
  # MultiCloud Management / Red Hat Advanced Cluster Management
  - argocd/operators/openshift-acm.yaml
@@ -73,8 +73,8 @@ resources:
  - argocd/instances/rhsso-integration-aws-instance.yaml
 #  - argocd/instances/rhsso-integration-azure-instance.yaml
 
-  # Global load balancer operator
- - argocd/operators/global-load-balancer-operator.yaml
+  # Global load balangit difcer operator
+# - argocd/operators/global-load-balancer-operator.yaml
 
 patches:
 - target:
