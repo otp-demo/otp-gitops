@@ -1,11 +1,11 @@
 # Load Balancer/Fault Tolerance Configuration
-For the OTP pattern when used in a hybrid multicloud sitution there is a need to be able to provide a unified and consistent end point even if one the cloud providers has a failure.
+For the OTP pattern when used in a hybrid multicloud situation there is a need to be able to provide a unified and consistent end point even if one the cloud providers has a failure.
 
-A solution is to use a 3rd party provider with their own infrastructure, that in the event of an outage on a cloud provider or even on prem will conttinue to keep operating, however this then itself becomes another single point of failure.  
+A solution is to use a 3rd party provider with their own infrastructure, that in the event of an outage on a cloud provider or even on prem will continue to keep operating, however this then itself becomes another single point of failure.  
 
 
 ## Cloudflare
-The following documents how to setup CloudFlare and openshift to function as the load balancing solutiuon
+The following documents how to setup CloudFlare and openshift to function as the load balancing solution
 
    ![load balancers](doc/images/loadbalancer.png "Load Balancer Topology")
 
@@ -20,7 +20,7 @@ For example if we want to expose an application called **app.myexample.com** we 
 
    ![Cloud Flare Pool](doc/images/pool-example.png "Example Pool")
 
-4. Add any monitors needed, it could be a simple check to see if 200 OK is returned or something more complex, this will dependad on the application
+4. Add any monitors needed, it could be a simple check to see if 200 OK is returned or something more complex, this will depend on the application
 
 
 ### Openshift route configuration
@@ -36,7 +36,7 @@ metadata:
   name: app-example
   namespace: openshift-gitops
 spec:
-  host: app.exmaple.com
+  host: app.example.com
   to:
     kind: Service
     name: example-service
