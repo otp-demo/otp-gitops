@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: rhsso-integration-bank-app
+  annotations:
+    argocd.argoproj.io/sync-wave: "490"
+  labels:
+    gitops.tier.layer: applications
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: sso-integration
+    server: https://kubernetes.default.svc
+  project: applications
+  source:
+    path: bank-app/rhsso-integration-bank-app
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
