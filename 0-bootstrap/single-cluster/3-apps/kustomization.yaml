@@ -69,6 +69,14 @@ resources:
  # Global load balancer configuration
  - argocd/clusters/global-load-balancer/create-global-zone-aws.yaml
 
+ ## Bank app and configuration
+ ##  Requires external secret access and a database
+  # - argocd/bank-app/rhsso-integration-bank-app.yaml
+  - argocd/bank-app/mobile-simulator.yaml
+  # - argocd/bank-app/transaction-service.yaml
+  # - argocd/bank-app/user-service.yaml
+  # - argocd/bank-app/bank-knative-service.yaml
+
 patches:
 - target:
     group: argoproj.io
