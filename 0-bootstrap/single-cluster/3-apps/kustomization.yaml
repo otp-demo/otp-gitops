@@ -72,7 +72,7 @@ resources:
 
  ## Bank app and configuration
  ##  Requires external secret access and a database
-#- argocd/bank-app/rhsso-integration-bank-app.yaml
+ - argocd/bank-app/rhsso-integration-bank-app.yaml
  - argocd/bank-app/mobile-simulator.yaml
 #- argocd/bank-app/transaction-service.yaml
 #- argocd/bank-app/user-service.yaml
