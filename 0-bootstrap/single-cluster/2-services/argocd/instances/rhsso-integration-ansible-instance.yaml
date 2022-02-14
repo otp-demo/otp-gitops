@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: rhsso-integration-ansible
   annotations:
-    argocd.argoproj.io/sync-wave: "255"
+    argocd.argoproj.io/sync-wave: "415"
   labels:
     gitops.tier.group: cntk
     gitops.tier.layer: services
