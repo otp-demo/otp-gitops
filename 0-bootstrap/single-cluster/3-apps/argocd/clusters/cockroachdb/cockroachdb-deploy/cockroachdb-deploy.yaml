@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cockroachdb
+  namespace: openshift-gitops
+  annotations:
+    argocd.argoproj.io/sync-wave: "610"
+spec:
+  destination:
+    namespace: multi-cluster-cockroachdb
+    server: 'https://kubernetes.default.svc'
+  project: applications
+  source:
+    path: clusters/cockroachdb/cockroachdb-deploy
+    repoURL: 'https://github.com/otp-demo/otp-gitops-apps'
+    targetRevision: HEAD
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true

@@ -77,8 +77,9 @@ resources:
  - argocd/bank-app/bank-knative-service.yaml
 
  ## CockroachDB. Sync waves range 600 - 620.
- - argocd/clusters/cockroachdb/aws/cockroachdb-aws.yaml
- - argocd/clusters/cockroachdb/azure/cockroachdb-azure.yaml
+ #- argocd/clusters/cockroachdb/aws/cockroachdb-aws.yaml
+ #- argocd/clusters/cockroachdb/azure/cockroachdb-azure.yaml
+ - argocd/clusters/cockroachdb/cockroachdb-deploy/cockroachdb-deploy.yaml
  - argocd/clusters/cockroachdb/cockroachdb-postdeploy-commands/post-deploy.yaml
 
 patches:
