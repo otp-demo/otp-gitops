@@ -45,7 +45,7 @@ resources:
  - argocd/clusters/create/vsphere/vsphere1.yaml
  
  # Demo - Do not remove.
- - argocd/clusters/create/aws/aws5.yaml
+ #- argocd/clusters/create/aws/aws5.yaml
 
  ## Create Instana Virtual Machines
  #- argocd/infra/virtual-machines/instana/instana-vm.yaml
