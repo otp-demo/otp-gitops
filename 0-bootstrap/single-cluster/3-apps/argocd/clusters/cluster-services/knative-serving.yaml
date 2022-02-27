@@ -1,21 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: rhsso-integration-ansible
+  name: apps-cluster-services-knative-serving
   annotations:
-    argocd.argoproj.io/sync-wave: "415"
+    argocd.argoproj.io/sync-wave: "420"
   labels:
-    gitops.tier.group: cntk
-    gitops.tier.layer: services
+    gitops.tier.layer: applications
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sso-integration
+    namespace: openshift-gitops
     server: https://kubernetes.default.svc
-  project: services
+  project: applications
   source:
-    path: instances/rhsso-integration-ansible
+    path: clusters/cluster-services/knative-serving/acm/
   syncPolicy:
     automated:
       prune: true

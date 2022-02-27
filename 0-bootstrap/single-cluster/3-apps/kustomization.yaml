@@ -38,6 +38,7 @@ resources:
  - argocd/clusters/create/aws/aws0.yaml
  - argocd/clusters/create/aws/aws1.yaml
  - argocd/clusters/create/aws/aws2.yaml
+ #- argocd/clusters/create/aws/aws3.yaml
 
  - argocd/clusters/create/azure/azure0.yaml
  - argocd/clusters/create/azure/azure1.yaml
@@ -59,24 +60,26 @@ resources:
  - argocd/clusters/submariner/create-managed-clusterset.yaml
  - argocd/clusters/submariner/configure-azure.yaml
  - argocd/clusters/submariner/deploy-submariner.yaml
- 
+
+ - argocd/clusters/cluster-services/openshift-serverless.yaml
+ - argocd/clusters/cluster-services/knative-serving.yaml
  
  ## Deploy Applications to Managed Clusters
  ## Include the Applications you wish to deploy below
  ## An example has been provided
  #- argocd/cloudpaks/cp4i/cp4i.yaml
-# - argocd/clusters/knative/deploy-knative.yaml
- 
- # Global load balancer configuration
- - argocd/clusters/global-load-balancer/create-global-zone-aws.yaml
 
  ## Bank app and configuration
  ##  Requires external secret access and a database
-#- argocd/bank-app/rhsso-integration-bank-app.yaml
+ - argocd/bank-app/rhsso-integration-bank-app.yaml
  - argocd/bank-app/mobile-simulator.yaml
-#- argocd/bank-app/transaction-service.yaml
-#- argocd/bank-app/user-service.yaml
-#- argocd/bank-app/bank-knative-service.yaml
+ - argocd/bank-app/transaction-service.yaml
+ - argocd/bank-app/user-service.yaml
+ - argocd/bank-app/bank-knative-service.yaml
+
+ ## CockroachDB. Sync waves range 600 - 620.
+ - argocd/clusters/cockroachdb/cockroachdb-deploy/cockroachdb-deploy.yaml
+ - argocd/clusters/cockroachdb/cockroachdb-postdeploy-commands/post-deploy.yaml
 
 patches:
 - target:
