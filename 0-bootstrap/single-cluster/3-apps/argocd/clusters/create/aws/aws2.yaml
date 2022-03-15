@@ -28,7 +28,7 @@ spec:
           name: "multicloud-cluster-set"
           enabled: true
 
-        powerState: Running
+        powerState: Hibernating 
         
         provider:
           region: ap-southeast-2
