@@ -88,6 +88,8 @@ resources:
   #Demo Applications
  - argocd/demo-apps/springboot.yaml
 
+ - argocd/demo-apps/tpn-operator.yaml
+
 patches:
 - target:
     group: argoproj.io
