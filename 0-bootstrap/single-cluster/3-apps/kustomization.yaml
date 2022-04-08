@@ -86,6 +86,11 @@ resources:
  - argocd/clusters/cockroachdb/cockroachdb-deploy/cockroachdb-deploy.yaml
 # - argocd/clusters/cockroachdb/cockroachdb-postdeploy-commands/post-deploy.yaml
 
+  #Demo Applications
+ - argocd/demo-apps/springboot.yaml
+
+ - argocd/demo-apps/tpn-operator.yaml
+
 patches:
 - target:
     group: argoproj.io
