@@ -78,9 +78,8 @@ resources:
  - argocd/bank-app/bank-knative-service.yaml
 
   ## Demo app with php
- - argocd/demo-web/demo-web-a.yaml
+#  - argocd/demo-web/demo-web-a.yaml
  - argocd/demo-web/demo-web-b.yaml
- - argocd/demo-web/demo-web-a-demo.yaml
 
  ## CockroachDB. Sync waves range 600 - 620.
  - argocd/clusters/cockroachdb/cockroachdb-deploy/cockroachdb-deploy.yaml
