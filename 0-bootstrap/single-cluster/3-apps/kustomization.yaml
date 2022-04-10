@@ -58,7 +58,7 @@ resources:
 # - argocd/clusters/cluster-services/openshift-logging.yaml
 
  - argocd/clusters/submariner/create-managed-clusterset.yaml
- - argocd/clusters/submariner/configure-azure.yaml
+#  - argocd/clusters/submariner/configure-azure.yaml
  - argocd/clusters/submariner/deploy-submariner.yaml
 
  - argocd/clusters/cluster-services/openshift-serverless.yaml
