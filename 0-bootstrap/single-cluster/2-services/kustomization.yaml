@@ -1,107 +1,106 @@
 resources:
- # IBM Foundations / Common Services
-#  - argocd/operators/ibm-foundations.yaml
-#  - argocd/instances/ibm-foundational-services-instance.yaml
- # - argocd/operators/ibm-automation-foundation-core-operator.yaml
- # - argocd/operators/ibm-automation-foundation-operator.yaml
- # - argocd/operators/ibm-common-services-mcm.yaml
- # - argocd/instances/ibm-common-services-mcm-instance.yaml
+  # IBM Foundations / Common Services
+  #  - argocd/operators/ibm-foundations.yaml
+  #  - argocd/instances/ibm-foundational-services-instance.yaml
+  # - argocd/operators/ibm-automation-foundation-core-operator.yaml
+  # - argocd/operators/ibm-automation-foundation-operator.yaml
+  # - argocd/operators/ibm-common-services-mcm.yaml
+  # - argocd/instances/ibm-common-services-mcm-instance.yaml
 
- # IBM Catalogs
-#  - argocd/operators/ibm-catalogs.yaml
+  # IBM Catalogs
+  #  - argocd/operators/ibm-catalogs.yaml
 
- # Required for IBM MQ
- #- argocd/instances/openldap.yaml
- # Required for IBM ACE, IBM MQ
- 
- # Certificate Management
- - argocd/operators/cert-manager.yaml
- - argocd/instances/cert-manager.yaml
+  # Required for IBM MQ
+  #- argocd/instances/openldap.yaml
+  # Required for IBM ACE, IBM MQ
 
- # Secrets Managment
- - argocd/instances/sealed-secrets.yaml
- - argocd/operators/external-secrets.yaml
+  # Certificate Management
+  - argocd/operators/cert-manager.yaml
+  - argocd/instances/cert-manager.yaml
 
+  # Secrets Managment
+  - argocd/instances/sealed-secrets.yaml
+  - argocd/operators/external-secrets.yaml
 
- # CICD
- #- argocd/operators/grafana-operator.yaml
- #- argocd/instances/grafana-instance.yaml
- # In OCP 4.7+ we need to install openshift-pipelines and possibly privileged scc to the pipeline serviceaccount
- - argocd/operators/openshift-pipelines.yaml
+  # CICD
+  #- argocd/operators/grafana-operator.yaml
+  #- argocd/instances/grafana-instance.yaml
+  # In OCP 4.7+ we need to install openshift-pipelines and possibly privileged scc to the pipeline serviceaccount
+  - argocd/operators/openshift-pipelines.yaml
 
- # Service Mesh
-# - argocd/operators/elasticsearch.yaml
-# - argocd/operators/jaeger.yaml
-# - argocd/operators/kiali.yaml
-# - argocd/operators/openshift-service-mesh.yaml
-# - argocd/instances/openshift-service-mesh-instance.yaml
+  # Service Mesh
+  # - argocd/operators/elasticsearch.yaml
+  # - argocd/operators/jaeger.yaml
+  # - argocd/operators/kiali.yaml
+  # - argocd/operators/openshift-service-mesh.yaml
+  # - argocd/instances/openshift-service-mesh-instance.yaml
 
- # MultiCloud Management / Red Hat Advanced Cluster Management
- - argocd/operators/openshift-acm.yaml
- - argocd/instances/openshift-acm-instance.yaml
- #- argocd/instances/openshift-acm-observability-instance.yaml
- #- argocd/operators/ibm-cp4mcm-operator.yaml
- #- argocd/instances/ibm-cp4mcm-instance.yaml
-#  - argocd/operators/ibm-infra-automation-operator.yaml
-#  - argocd/instances/ibm-infra-automation-instance.yaml
+  # MultiCloud Management / Red Hat Advanced Cluster Management
+  - argocd/operators/openshift-acm.yaml
+  - argocd/instances/openshift-acm-instance.yaml
+  #- argocd/instances/openshift-acm-observability-instance.yaml
+  #- argocd/operators/ibm-cp4mcm-operator.yaml
+  #- argocd/instances/ibm-cp4mcm-instance.yaml
+  #  - argocd/operators/ibm-infra-automation-operator.yaml
+  #  - argocd/instances/ibm-infra-automation-instance.yaml
 
- # Ansible Automation Platform
- - argocd/operators/ansible-automation-platform-operator.yaml
- - argocd/instances/ansible-automation-platform-instance.yaml
+  # Ansible Automation Platform
+  - argocd/operators/ansible-automation-platform-operator.yaml
+  - argocd/instances/ansible-automation-platform-instance.yaml
 
- # OpenShift Virtualization (Used to host instana instance)
- - argocd/operators/openshift-virtualization.yaml
- - argocd/instances/openshift-virtualization-instance.yaml
+  # OpenShift Virtualization (Used to host instana instance)
+  - argocd/operators/openshift-virtualization.yaml
+  - argocd/instances/openshift-virtualization-instance.yaml
 
- # OpenShift Advanced Cluster Security (aka Stackrox)
- - argocd/operators/openshift-acs-operator.yaml
- - argocd/instances/openshift-acs-instance.yaml
+  # OpenShift Advanced Cluster Security (aka Stackrox)
+  - argocd/operators/openshift-acs-operator.yaml
+  - argocd/instances/openshift-acs-instance.yaml
 
- # Observability
-#  - argocd/operators/turbonomic.yaml
- #- argocd/instances/instana-agent.yaml
+  # Observability
+  #  - argocd/operators/turbonomic.yaml
+  #- argocd/instances/instana-agent.yaml
 
- # RHSSO
- - argocd/operators/rhsso-operator.yaml
- - argocd/instances/rhsso-instance.yaml
+  # RHSSO
+  - argocd/operators/rhsso-operator.yaml
+  - argocd/instances/rhsso-instance.yaml
 
- # RHSSO instance - configs
- - argocd/instances/rhsso-integration-preprocessing-instance.yaml
- - argocd/instances/rhsso-integration-argocd-instance.yaml
- - argocd/instances/rhsso-integration-hub-instance.yaml
- - argocd/instances/rhsso-integration-managed-clusters.yaml
- - argocd/instances/rhsso-integration-aws-instance.yaml
- - argocd/instances/rhsso-integration-azure-instance.yaml
- - argocd/instances/rhsso-integration-ansible-instance.yaml
+  # RHSSO instance - configs
+  - argocd/instances/rhsso-integration-preprocessing-instance.yaml
+  - argocd/instances/rhsso-integration-argocd-instance.yaml
+  - argocd/instances/rhsso-integration-hub-instance.yaml
+  - argocd/instances/rhsso-integration-managed-clusters.yaml
+  - argocd/instances/rhsso-integration-aws-instance.yaml
+  - argocd/instances/rhsso-integration-azure-instance.yaml
+  - argocd/instances/rhsso-integration-ansible-instance.yaml
 
-  # Global load balangit difcer operator
+    # Global load balangit difcer operator
 # - argocd/operators/global-load-balancer-operator.yaml
 
 patches:
-- target:
-    group: argoproj.io
-    kind: Application
-    labelSelector: "gitops.tier.layer=services"
-  patch: |-
-    - op: add
-      path: /spec/source/repoURL
-      value: https://github.com/otp-demo/otp-gitops-services.git
-    - op: add
-      path: /spec/source/targetRevision
-      value: master
-- target:
-    group: argoproj.io
-    kind: Application
-    labelSelector: "gitops.tier.layer=services,gitops.tier.source=helm"
-  patch: |-
-    - op: add
-      path: /spec/source/repoURL
-      value: https://charts.cloudnativetoolkit.dev
-- target:
-    name: ibm-automation-foundation-operator
-  patch: |-
-    - op: add
-      path: /spec/source/helm/parameters/-
-      value:
-        name: spec.channel
-        value: v1.1
+  - target:
+      group: argoproj.io
+      kind: Application
+      labelSelector: "gitops.tier.layer=services"
+    patch: |-
+      - op: add
+        path: /spec/source/repoURL
+        value: https://github.com/otp-demo/otp-gitops-services.git
+      - op: add
+        path: /spec/source/targetRevision
+        value: master
+  - target:
+      group: argoproj.io
+      kind: Application
+      labelSelector: "gitops.tier.layer=services,gitops.tier.source=helm"
+    patch: |-
+      - op: add
+        path: /spec/source/repoURL
+        value: https://charts.cloudnativetoolkit.dev
+  - target:
+      name: ibm-automation-foundation-operator
+    patch: |-
+      - op: add
+        path: /spec/source/helm/parameters/-
+        value:
+          name: spec.channel
+          value: v1.1
