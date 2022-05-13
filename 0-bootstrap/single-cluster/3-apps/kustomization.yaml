@@ -35,13 +35,13 @@ resources:
   # - argocd/clusters/create/aws/aws-cluster-shared-0.yaml
   # - argocd/clusters/create/aws/aws-cluster-shared-1.yaml
   # - argocd/clusters/create/aws/aws-cluster-shared-2.yaml
-  - argocd/clusters/create/aws/aws0.yaml
-  - argocd/clusters/create/aws/aws1.yaml
-  - argocd/clusters/create/aws/aws2.yaml
+  # - argocd/clusters/create/aws/aws0.yaml
+  # - argocd/clusters/create/aws/aws1.yaml
+  # - argocd/clusters/create/aws/aws2.yaml
   #- argocd/clusters/create/aws/aws3.yaml
 
-  - argocd/clusters/create/azure/azure0.yaml
-  - argocd/clusters/create/azure/azure1.yaml
+  # - argocd/clusters/create/azure/azure0.yaml
+  # - argocd/clusters/create/azure/azure1.yaml
 
   # - argocd/clusters/create/vsphere/vsphere1.yaml
 
